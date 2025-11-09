@@ -1,6 +1,6 @@
 {
-  "name": "my-module",
-  "configKey": "myModule",
+  "name": "u-nuxt",
+  "configKey": "u-nuxt",
   "version": "1.0.0",
   "builder": {
     "@nuxt/module-builder": "1.0.2",

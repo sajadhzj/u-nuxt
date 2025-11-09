@@ -1,18 +1,17 @@
-import { createJiti } from "file:///C:/Users/slonz/Desktop/codes/unibas/package-u-nuxt/node_modules/jiti/lib/jiti.mjs";
+import { defineNuxtModule, createResolver, addPlugin } from '@nuxt/kit';
 
-const jiti = createJiti(import.meta.url, {
-  "interopDefault": true,
-  "alias": {
-    "my-module": "C:/Users/slonz/Desktop/codes/unibas/package-u-nuxt"
+const module = defineNuxtModule({
+  meta: {
+    name: "u-nuxt",
+    configKey: "u-nuxt"
   },
-  "transformOptions": {
-    "babel": {
-      "plugins": []
-    }
+  // Default configuration options of the Nuxt module
+  defaults: {},
+  async setup(_options, nuxt) {
+    const resolver = createResolver(import.meta.url);
+    addPlugin(resolver.resolve("./runtime/plugin"));
+    nuxt.options.postcss.plugins["@tailwindcss/postcss"] = {};
   }
-})
+});
 
-/** @type {import("C:/Users/slonz/Desktop/codes/unibas/package-u-nuxt/src/module.js")} */
-const _module = await jiti.import("C:/Users/slonz/Desktop/codes/unibas/package-u-nuxt/src/module.ts");
-
-export default _module?.default ?? _module;
+export { module as default };

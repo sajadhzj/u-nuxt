@@ -1,2 +1,8 @@
-export * from "C:/Users/slonz/Desktop/codes/unibas/package-u-nuxt/src/module.js";
-export { default } from "C:/Users/slonz/Desktop/codes/unibas/package-u-nuxt/src/module.js";
+import * as _nuxt_schema from '@nuxt/schema';
+
+interface ModuleOptions {
+}
+declare const _default: _nuxt_schema.NuxtModule<ModuleOptions, ModuleOptions, false>;
+
+export { _default as default };
+export type { ModuleOptions };
