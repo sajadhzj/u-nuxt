@@ -2,7 +2,7 @@ import {
   defineNuxtModule,
   addPlugin,
   createResolver,
-  addVitePlugin,
+  addImportsDir,
 } from "@nuxt/kit";
 
 // Module options TypeScript interface definition
@@ -18,9 +18,9 @@ export default defineNuxtModule<ModuleOptions>({
   async setup(_options, nuxt) {
     const resolver = createResolver(import.meta.url);
 
-    // Do not add the extension since the `.ts` will be transpiled to `.mjs` after `npm run prepack`
-    addPlugin(resolver.resolve("./runtime/plugin"));
-
     nuxt.options.postcss.plugins["@tailwindcss/postcss"] = {};
+
+    addPlugin(resolver.resolve("./runtime/plugin"));
+    addImportsDir(resolver.resolve("./runtime/composables"));
   },
 });
