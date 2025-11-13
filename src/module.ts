@@ -3,6 +3,7 @@ import {
   addPlugin,
   createResolver,
   addImportsDir,
+  addComponent,
 } from "@nuxt/kit";
 
 // Module options TypeScript interface definition
@@ -22,5 +23,26 @@ export default defineNuxtModule<ModuleOptions>({
 
     addPlugin(resolver.resolve("./runtime/plugin"));
     addImportsDir(resolver.resolve("./runtime/composables"));
+
+    addComponent({
+      name: "UCard",
+      filePath: resolver.resolve("./runtime/components/Card"),
+    });
+    addComponent({
+      name: "UIcon",
+      filePath: resolver.resolve("./runtime/components/Icon"),
+    });
+    addComponent({
+      name: "ULoading",
+      filePath: resolver.resolve("./runtime/components/Loading"),
+    });
+    addComponent({
+      name: "UButton",
+      filePath: resolver.resolve("./runtime/components/Button"),
+    });
+    addComponent({
+      name: "UInput",
+      filePath: resolver.resolve("./runtime/components/Input"),
+    });
   },
 });

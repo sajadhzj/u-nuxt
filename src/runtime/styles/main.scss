@@ -1,4 +1,5 @@
-@use 'tailwindcss';
-html{
-  background:red
-}
+@use "./tailwind-config.scss";
+@use "./components/button.scss";
+@use "./components/loading.scss";
+@use "./components/card.scss";
+@use "./components/input.scss";

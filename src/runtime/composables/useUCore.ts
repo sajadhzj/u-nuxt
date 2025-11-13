@@ -24,7 +24,7 @@ const pageList = (
     } else {
       const relPath = path.relative(resolver.resolve(baseDir), filePath);
       results.push({
-        path: `/${prefix}/${entry.name}`
+        path: `${prefix}/${entry.name}`
           .replace(/\\/g, "/")
           .replaceAll("_", ":")
           .replaceAll(".vue", ""),
