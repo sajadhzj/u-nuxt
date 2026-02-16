@@ -1,0 +1,28 @@
+@import "tailwindcss" theme(static) source("../../../..");
+@import "../../../dist/runtime/assets/styles/main.css";
+
+@theme static {
+  --color-primary-50: #e8f9fc;
+  --color-primary-100: #d2f4f9;
+  --color-primary-200: #a5e9f3;
+  --color-primary-300: #78deed;
+  --color-primary-400: #4ad3e8;
+  --color-primary-500: #1dc7e2;
+  --color-primary-600: #17a0b5;
+  --color-primary-700: #127887;
+  --color-primary-800: #0c505a;
+  --color-primary-900: #06282d;
+  --color-primary-950: #041c20;
+
+  --color-secondary-50: #041c20;
+  --color-secondary-100: #06282d;
+  --color-secondary-200: #0c505a;
+  --color-secondary-300: #127887;
+  --color-secondary-400: #127887;
+  --color-secondary-500: #1dc7e2;
+  --color-secondary-600: #d2f4f9;
+  --color-secondary-700: #a5e9f3;
+  --color-secondary-800: #78deed;
+  --color-secondary-900: #4ad3e8;
+  --color-secondary-950: #1dc7e2;
+}
